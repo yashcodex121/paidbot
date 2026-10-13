@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram Paid Channel Bot
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/paidbot
+ExecStart=/opt/paidbot/venv/bin/python -m app
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
